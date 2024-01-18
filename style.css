@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    position: relative;
+
+    background-image: linear-gradient(160deg, black 30%,
+            rgb(0, 0, 0, .95) 50%,
+            rgba(0, 0, 0, 0.9) 70%,
+            rgb(0, 0, 0, .8) 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: poppins;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.left-bar {
+    height: 100vh;
+    width: 15%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgb(231, 159, 159);
+}
+
+.section-container {
+    width: 85%;
+}
+
+.section {
+    height: 100vh;
+    width: 100%;
+    padding: 2rem;
+}
+
+#section1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    color: white;
+    position: relative;
+}
+
+.main-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+
+    text-align: start;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+.head-def {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.ball-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.ball {
+    position: absolute;
+    top: 3rem;
+    left: 7%;
+    width: 90%;
+}
+
+.ball-svg {
+    width: 100%;
+}
+
+/* screen dynamics */
+
+@media(max-width: 1200px) {
+    #section1 {
+        grid-template-columns: 1fr;
+    }
+
+    .ball-container {
+        position: absolute;
+        top: 30%;
+        right: 0;
+        width: 40%;
+    }
+
+    .ball {
+        top: 0;
+        left: 0;
+        z-index: -999;
+    }
+}
+
+@media(max-width: 900px) {
+    .left-bar {
+        display: none;
+    }
+}
+
+@media(max-width: 700px) {
+    html {
+        font-size: 70%;
+    }
+
+    .main-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: unset;
+
+        height: 80vh;
+    
+        text-align: start;
+        padding: 2rem;
+    }
+
+    .ball-container{
+        width: 80%;
+        right: -20%;
+    }
+
+    .ball {
+        top: 0;
+        left: 0;
+        z-index: -999;
+    }
+}
+
+/*  */
